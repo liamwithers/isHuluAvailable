@@ -124,8 +124,8 @@ EOF
 touch exists;
 phantomjs hulu.js http://hulu.com | tee exists
 if grep -q 'Sorry, currently' "exists"; then
-   echo Hulu is unavailable;
+   echo "\n\nHulu is unavailable";
 else
-   echo Hulu is available;
+   echo "\n\nHulu is available";
 fi
 rm hulu.js exists;
